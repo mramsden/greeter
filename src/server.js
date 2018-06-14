@@ -9,7 +9,7 @@ const log = require('./logger')
 app.use(async (ctx, next) => {
   const start = Date.now()
   await next()
-  const ms = Date.now() - start;
+  const ms = Date.now() - start
   log.info('%s %s - %ims', ctx.method, ctx.url, ms)
 })
 
