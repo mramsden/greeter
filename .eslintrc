@@ -1,10 +1,6 @@
 {
     "extends": "standard",
-    "plugins": [
-        "import",
-        "node",
-        "promise",
-        "standard",
-        "jest"
-    ]
+    "env": {
+        "jest": true
+    }
 }
