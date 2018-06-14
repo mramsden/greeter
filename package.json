@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js | bunyan",
     "test": "jest",
-    "lint": "standard --env jest"
+    "lint": "eslint index.js src/**/*.js"
   },
   "dependencies": {
     "bunyan": "^1.8.12",
@@ -14,8 +14,14 @@
     "koa-router": "^7.4.0"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "jest": "^23.1.0",
-    "standard": "^11.0.1",
     "supertest": "^3.1.0"
   }
 }

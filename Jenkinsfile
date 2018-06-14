@@ -8,6 +8,12 @@ pipeline {
                 sh 'yarn install'
             }
         }
+        stage('Check') {
+            steps {
+                sh 'yarn lint -f checkstyle -o checkstyle/report.xml || true'
+                checkstyle pattern: 'checkstyle/report.xml'
+            }
+        }
         stage('Test') {
             steps {
                 sh 'yarn test --coverage'

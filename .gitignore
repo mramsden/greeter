@@ -1,3 +1,4 @@
 .vscode
+checkstyle
 coverage
 node_modules
